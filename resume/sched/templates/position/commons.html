@@ -1,0 +1,135 @@
+
+{% macro detail(appt, link_title=false, show_edit=false, show_skills=true) %}
+<div class="created_position">
+    {% if show_edit %}
+    <div class="edit-controls"  align="right">
+        <i class="icon-pencil"></i>
+        <a href="{{ url_for('position_edit', position_id=appt.id) }}">Edit</a>
+        <span class="inline-pad"></span>
+        <i class="icon-trash"></i>
+        <a class="position-delete-link" href="#" data-delete-url="{{ url_for('position_delete', position_id=appt.id) }}">Delete</a>
+    </div>
+    {% endif %}
+    {% if link_title %}
+    <h3><a href="{{ url_for('position_details', lang_code=g.current_lang, position_id=appt.id) }}">{{ appt.position_title or '(No Title)' }}</a></h3>
+    <h4><a href="{{ appt.company_website|default('') }}" target="_blank"><i class="fa fa-briefcase"></i> {{ appt.company_name|default('') }}</a></h4>
+    {% else %}
+    <h1>{{ appt.position_title or '(No Title)' }}</h1>
+    <h2>{{ appt.company_name|default('') }}</h2>
+    <h3><i class="fa fa-globe"></i> <a href="{{ appt.company_website|default('') }}">{{ appt.company_website|default('') }}</a></h3>
+    <h3><i class="fa fa-map-marker"></i> {{ appt.location|default('') }}</h3>
+    <hr>
+    <h4>Job Description</h4>
+    <div class="description">{{ appt.description|default('')|markdown }}</div>
+    <hr>
+    {% endif %}
+    <div class="requirements">
+        <h4>Required skills:</h4>
+        {% if show_skills %}
+        <ul>
+          {% if appt.required_skill_one %}
+            <li>{{ appt.required_skill_one|default('')}}</li>
+          {% else %}
+          {% endif %}
+
+          {% if appt.required_skill_two %}
+            <li>{{ appt.required_skill_two|default('')}}</li>
+          {% else %}
+          {% endif %}
+
+          {% if appt.required_skill_three %}
+            <li>{{ appt.required_skill_three|default('')}}</li>
+          {% else %}
+          {% endif %}
+
+          {% if appt.required_skill_four %}
+            <li>{{ appt.required_skill_four|default('')}}</li>
+          {% else %}
+          {% endif %}
+          
+          {% if appt.required_skill_five %}
+            <li>{{ appt.required_skill_five|default('')}}</li>
+          {% else %}
+          {% endif %}
+
+          {% if appt.required_skill_six %}
+            <li>{{ appt.required_skill_six|default('')}}</li>
+          {% else %}
+          {% endif %}
+        </ul>
+        {% else %}
+        <p>No Requirements were specified</p>
+        {% endif %}
+    </div>
+    {% if show_edit %}
+    <div class="edit-controls"  align="right">
+        <i class="icon-pencil"></i>
+        <a href="{{ url_for('position_edit', position_id=appt.id) }}">Edit</a>
+        <span class="inline-pad"></span>
+        <i class="icon-trash"></i>
+        <a class="position-delete-link" href="#" data-delete-url="{{ url_for('position_delete', position_id=appt.id) }}">Delete</a>
+    </div>
+    {% endif %}
+
+    <!-- Bootstrap trigger to open modal -->
+
+
+</div>
+{% endmacro %}
+
+{% macro edit_field(field, catch_kwargs=true) %}
+<div class="form-group {% if field.errors %}error{% endif %}">
+    <label for="{{ field.id }}" class="control-label">
+        {{ field.label.text }}{% if field.flags.required %} *{% endif %}:
+    </label>
+
+    {% set class_ = kwargs.pop('class_', '') %}
+    {% if field.flags.required %}
+    {% set class_ = class_ + ' required' %}
+    {% endif %}
+
+    {% if field.type == 'BooleanField' %}
+    <div class="checkbox">
+        <label>
+            {{ field(class_=class_, **kwargs) }}
+            {{ field.label.text|safe }}
+        </label>
+    </div>
+
+    {% else %}
+
+    {% if field.type in ('TextField', 'TextAreaField', 'PasswordField') %}
+    {% set class_ = class_ + ' input-xlarge form-control' %}
+
+    {% elif field.type == 'FileField' %}
+    {% set class_ = class_ + ' input-file form-control' %}
+    {% endif %}
+
+    {% if field.type == 'SelectField' %}
+    {{ field(class_=class_, **kwargs) }}
+    {% else %}
+
+    {{ field(class_=class_,  **kwargs) }}
+    {% endif %}
+
+    {% endif %}
+
+    {% if field.errors %}
+    <span class="error help-inline">{{ field.errors|join(', ') }}</span>
+    {% endif %}
+    {% if field.description %}
+    <p class="help-block">{{ field.description|safe }}</p>
+    {% endif %}
+
+</div>
+{% endmacro %}
+
+{% macro edit_field_old(field, catch_kwargs=true) %}
+<div class="control-group{% if field.errors %} error{% endif%}">
+    {{ field.label(class="control-label") }}
+    <div class="controls">
+        {{ field(**kwargs) }}
+        {% for error in field.errors %}<span class="help-inline">{{ error }}</span>{% endfor %}
+    </div>
+</div>
+{% endmacro %}

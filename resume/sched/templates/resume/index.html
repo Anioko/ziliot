@@ -1,0 +1,20 @@
+{% extends 'candidates_base.html' %}
+
+{% from 'resume/common.html' import detail %}
+
+{% block title %}Resumes{% endblock title %}
+
+{% block main %}
+<div class="row">
+  {% for appt in appts %}
+    <div class="span12">
+      {{ detail(appt, link_title=true, show_edit=false, show_summary=true) }}
+    </div>
+  {% else %}
+  <div class="page-header">
+  <h1>Welcome. <small>In order to be applying for entry level jobs and internships through Internly you will need to create a one time resume to use to apply to various positions. You can always edit your CV to take out certain things or add certain things as needed. Please use this link <a href="{{ url_for('resume_create', lang_code= g.current_lang) }}"> to fill out your resume</a>.</small></h1>
+</div>
+    <h3 class="span12"></h3>
+  {% endfor %}
+</div>
+{% endblock main %}

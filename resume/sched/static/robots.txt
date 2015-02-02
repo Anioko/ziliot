@@ -1,0 +1,11 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /resumes/
+Disallow: /company/
+Disallow: /dashboard/
+Disallow: /naviagtor/
+Disallow: /find/
+Disallow: /marketplace/
+Disallow: /front/
+
+Sitemap: http://www.ziliot.com/sitemap.xml

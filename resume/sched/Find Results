@@ -1,0 +1,23 @@
+Searching 12 files for "resume_create"
+
+/Users/ab/Documents/projecs/Internly2.1/Trial-Internly/resume/sched/templates/resume/dashboard.html:
+  235  <div class="row">
+  236      <div class="add_resume col-sm-12 col-xs-12">
+  237:       <a href="{{ url_for('resume_create, lang_code= g.current_lang') }}" class="btn"><i class="fa fa-pencil-square-o"></i> Create resume</a>
+  238        <br>
+  239         <a href="{{ url_for('create_resume_ln') }}" class="ln"><i class="fa fa-angle-double-down"></i> Import form LinkedIn</a>
+  ...
+  271        <h2>Welcome!</h2>
+  272        <p>
+  273:         To apply for entry level jobs and internships through Internly you will need to <a href="{{ url_for('resume_create', lang_code= g.current_lang) }}">create</a> a resume.
+  274        </p>
+  275        <p>
+
+/Users/ab/Documents/projecs/Internly2.1/Trial-Internly/resume/sched/templates/resume/index.html:
+   13    {% else %}
+   14    <div class="page-header">
+   15:   <h1>Welcome. <small>In order to be applying for entry level jobs and internships through Internly you will need to create a one time resume to use to apply to various positions. You can always edit your CV to take out certain things or add certain things as needed. Please use this link <a href="{{ url_for('resume_create', lang_code= g.current_lang) }}"> to fill out your resume</a>.</small></h1>
+   16  </div>
+   17      <h3 class="span12"></h3>
+
+3 matches across 2 files

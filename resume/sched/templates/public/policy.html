@@ -1,0 +1,183 @@
+{% extends "public/public.html" %}
+
+{% block head%}
+<link href="{{ url_for('static', filename='css/style_public.css') }}" rel="stylesheet">
+{% endblock head%}
+
+{% block content %}
+
+        <!-- CSS code from Bootply.com editor -->
+        
+        <style type="text/css">
+            /* -- custom css for Bootstrap 3.x --*/
+
+/* move special fonts to HTML head for better performance */
+@import url('http://fonts.googleapis.com/css?family=Open+Sans:200,300,400,600');
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+/* fix bs3 horizontal scrollbar bug */
+.row { margin: 0; padding: 0 }
+
+h1 {
+  font-size:50px; 
+}
+
+h4, p, h5, h6 {
+    color: #5A5A5A;
+    font-family:'Lato',sans-serif;
+    font-weight: 300;
+    line-height: 1.1;
+}
+p {
+  font-size: 1.25em;
+}
+h4 {
+  font-weight: bold;
+}
+p {
+  font-size: 1.1em;
+  font-weight: 300;
+  line-height: 1.5em;
+}
+
+
+
+/* -- end custom css for Bootstrap 3.x --*/
+
+        </style>
+    </head>
+    
+    <!-- HTML code from Bootply.com editor -->
+    
+    <body  >
+        
+        
+
+
+<div class="header vert policy">
+  <div class="container">
+    
+    <h1>Privacy Policy</h1>
+    </div>
+  </div>
+
+  <div id="sec1" class="blurb">
+    <div class="container">
+    <p>{{_('Jobisoft.com  is operated in Europe by or on behalf of Internly Oy , a company incorporated in Finland with registered company number FI2641548-2   , our office at Energiakuja 3, 00180, Helsinki Finland, 3rd floor.  
+                  This policy is designed to protect your privacy and to help you understand, how we collect and use your personal information. 
+                  By submitting a job application, the applicant approves the storing and use of the submitted data. Personal data protection in accordance with Section 10 of the Personal Data Act (HetiL 10§).')}} </p>
+
+  <h4>{{_('Right of access:')}}</h4>
+
+  <p>{{_('In accordance with Section 26§ of the Personal Data Act, everyone has the right to inspect what information related to their person has been stored in the register. Any request to inspect the register shall be delivered in writing, with the requesting party’s signature to  info@intern.ly')}}</p>
+
+  <h4>{{_('Purpose of processing of personal data:')}}</h4>
+  <p>{{_('The register is intended for receiving, processing and storing the job applications of persons interested in pursuing a career with our client companies.  Applicants may apply for a particular position or fill out their resumes for search by our clients and human resources personnel may also process an application in connection with other suitable positions.
+  Job application data is kept in an applicant register for three (4) years and may be retrieved in connection with other positions.')}}</p> <p>{{_('Job application data is always confidential and is never disclosed to persons outside the recruitment process. Confidentiality refers to the fact that job application data is only available to persons authorized to process the data.
+  Internly Oy may at its discretion remove any job application with incomplete information.')}}<p>{{_('An application may also be removed or altered at the applicant’s request. Any request to remove or alter an application shall be delivered in writing to the controller or presented in person at the controller’s address.')}}</p>
+
+  <h4>{{_('Registered data:')}}</h4>
+  <p>{{_("Applicant’s basic information (name, contact information, date of birth)")}}</p>
+  <p>{{_("Applicant’s education and work experience")}}</p>
+  <p>{{_("Applicant’s preferences regarding future employment")}}</p>
+  <p>{{_("Description of applicant’s experience")}} </p>
+  <p>{{_("Additional information provided by the applicant")}}</p>
+  <h4>{{_('Sources of data:')}}</h4>
+  <p>{{_('Job applicants')}}</p>
+  <h4>{{_('Regular transfers of disclosed data:')}}</h4>
+  <p>{{_('The data will be disclosed to clients outside Internly Oy  .')}}</p>
+  <h4>{{_('Transfer of data outside the EU/EEA:')}}</h4>
+  <p>{{_('The data will be transferred clients outside the European Union or the European Economic Area.')}}</p>
+   <h4>{{_('Principles of data protection:')}}</h4>
+  <p>{{_('A. Hard copies')}}</p>
+  <p>{{_('Printed paper versions of CVs are stored together with other recruitment material.')}}</p>
+  <h4>{{_('B. Electronically stored data:')}}</h4>
+  <p>{{_('The registered data are protected using passwords. Only employees and clients of Internly Oy  or its subsidiaries have access to personal data stored in the register. ')}}</p>
+
+  </p>
+      
+  </div>
+</div>
+
+<div class="center_w_margin">
+  <div class="btn-group">
+    <button class="btn btn-default disabled">
+      Share:
+    </button>
+
+    <a href="http://www.facebook.com/sharer.php?u=http%3A%2F%2Fintern.ly&amp;t=Url%20Encoded%20Text" title="On Facebook" target="_blank" class="btn btn-default">
+      <i class="fa fa-facebook fa-lg fb"></i>
+    </a>
+
+    <a href="http://twitter.com/share?url=http%3A%2F%2Fintern.ly&amp;text=Url%20Encoded%20Text" title="On Twitter" target="_blank" class="btn btn-default">
+      <i class="fa fa-twitter fa-lg tw"></i>
+    </a>
+
+
+    <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http%3A%2F%2Fintern.ly" title="On LinkedIn" target="_blank" class="btn btn-default">
+      <i class="fa fa-linkedin fa-lg linkin"></i>
+    </a>
+
+    <a href="http://vk.com/share.php?url=http%3A%2F%2Fintern.ly&amp;title=Url%20Encoded%20Title&amp;description=Url%20Encoded%20Text&amp;image=https%3A%2F%2Ffbcdn-sphotos-g-a.akamaihd.net%2Fhphotos-ak-frc3%2Ft1%2F10007500_219483098251971_1640217409_n.jpg" title="On VK.com" target="_blank" class="btn btn-default">
+      <i class="fa fa-vk fa-lg vk"></i>
+    </a>
+
+    <a href="http://www.pinterest.com/pin/create/button/?url=http%3A%2F%2Fintern.ly&amp;description=Url%20Encoded%20Text&amp;media=https%3A%2F%2Ffbcdn-sphotos-g-a.akamaihd.net%2Fhphotos-ak-frc3%2Ft1%2F10007500_219483098251971_1640217409_n.jpg" title="Pin It" target="_blank" class="btn btn-default">
+      <i class="fa fa-pinterest fa-lg pinterest"></i>
+    </a>
+  </div>
+</div>
+
+
+
+ <footer role="contentinfo" class="bs-docs-footer">
+
+
+
+    <!--<p>Designed and built with all the love in the world by <a target="_blank" href="http://twitter.com/mdo">@mdo</a> and <a target="_blank" href="http://twitter.com/fat">@fat</a>.</p>
+    <p>Maintained by the <a href="https://github.com/twbs?tab=members">core team</a> with the help of <a href="https://github.com/twbs/bootstrap/graphs/contributors">our contributors</a>.</p>-->
+    <p>Product of Internly Oy <a target="_blank" href="#"></a> Made in  Finland <a href="#">2014</a>.</p>
+    <!---<ul class="bs-docs-footer-links muted">
+      <li>Currently v3.1.1</li>
+      <li><a href="#">GitHub</a></li>
+      <li><a href="#">Examples</a></li>
+      <li><a href="#">v2.3.2 docs</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Expo</a></li>
+      <li><a href="/blog">Blog</a></li>
+      <li><a href="">Issues</a></li>
+      <li><a href="">Releases</a></li>
+    </ul>-->
+  </div>
+</footer>
+       
+        <!-- JavaScript jQuery code from Bootply.com editor -->
+        
+        <script type='text/javascript'>
+        
+        $(document).ready(function() {
+        
+            /* smooth scrolling for scroll to top */
+$('.scroll-top').click(function(){
+  $('body,html').animate({scrollTop:0},1000);
+})
+/* smooth scrolling for scroll down */
+$('.scroll-down').click(function(){
+  $('body,html').animate({scrollTop:$(window).scrollTop()+800},1000);
+})
+
+/* highlight the top nav as scrolling occurs */
+$('body').scrollspy({ target: '#navbar' })
+
+        
+        });
+        
+        </script>
+        
+ 
+{% endblock %}

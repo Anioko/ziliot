@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /resumes/
+
+
+
+Sitemap: http://www.ziliot.com/sitemap.xml

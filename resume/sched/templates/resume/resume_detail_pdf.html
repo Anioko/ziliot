@@ -1,0 +1,54 @@
+{% from 'resume/common.html' import detail %}
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<style type="text/css">
+
+body {
+    height: 100%;
+    width: 100%;
+
+    font-size: 15px;
+    line-height: 1.42857;
+}
+
+h1 {
+  font-size:50px;
+}
+
+h4, p, h5, h6 {
+
+    font-family: inherit;
+    font-weight: 300;
+    line-height: 1.1;
+}
+
+footer {
+  padding: 100px 0;
+}
+
+@font-face {
+    font-family: sans-serif;
+    src: url("http://intern.ly/static/fonts/lato/Lato-Reg.ttf");
+}
+@font-face {
+    font-family: serif;
+    src: url("http://intern.ly/static/fonts/lato/Lato-Reg.ttf");
+}
+@font-face {
+    font-family: Helvetica;
+    src: url("http://intern.ly/static/fonts/lato/Lato-Reg.ttf");
+}
+
+</style>
+</head>
+<body>
+<div class="container">
+<div class="panel panel-default">
+  <div class="panel-body">
+        {{ detail(appt, link_title=false, show_edit=false, show_summary=true) }}
+  </div>
+</div>
+</div>
+</body>
+</html>

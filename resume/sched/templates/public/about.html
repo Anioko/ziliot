@@ -1,0 +1,213 @@
+{% extends "public/public.html" %}
+
+{% block head%}
+<link href="{{ url_for('static', filename='css/style_public.css') }}" rel="stylesheet">
+{% endblock head%}
+
+{% block content %}
+
+        <!-- CSS code from Bootply.com editor -->
+        
+        <style type="text/css">
+            /* -- custom css for Bootstrap 3.x --*/
+
+/* move special fonts to HTML head for better performance */
+@import url('http://fonts.googleapis.com/css?family=Open+Sans:200,300,400,600');
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+/* fix bs3 horizontal scrollbar bug */
+.row { margin: 0; padding: 0; }
+
+h1 {
+  font-size:50px; 
+}
+
+
+
+h4, p, h5, h6, p {
+     color: #5B6C7E;
+    font-family:'Lato',sans-serif;
+    font-weight: 200;
+    line-height: 1.1;
+}
+
+
+</style>
+        
+        
+
+
+<div class="header vert about">
+  <div class="container">
+    
+    <h1>{{_('What is Ziliot?')}}</h1>
+    <p>
+      <strong>Ziliot</strong>{{ _('is an online recruitment portal, which is match-making companies, and people in need of work. Our vision is to become a free platform to find jobs and recruit candidates.. We make it easier for companies to find applicants for their needs.') }}
+    </p>
+    <p>
+      <strong>{{_('Why?')}}</strong> {{_('We believe that there should be a better way to find and hire a candidates. We want to make it easy to find them and also to hire them .')}}
+    </p>
+    <p>
+      <strong>{{_('How?')}}</strong> {{_('Applicant creates a CV, which only has the most necessary information for recruiters. Applicants use one-click ”Apply Now” system, to numerous open positions. We want to make it easy for them to be tested as well on through or platform or for an employer to create a test here and they apply with samples of their codes or answers to the software test. .')}}
+    </p>
+      <!---<a href="#" class="btn btn-default btn-lg">+358 040 128 9606</a>-->
+   <p> <strong>Want to join us?</strong> At the moment we are looking for volunteers who will help us in translations to local languages. Get in touch with us if you want to help.</p> 
+  </div>
+</div>
+
+<!------<div class="container">
+  <div class="cofounder">
+    <div class="col-md-2">
+      <img src="{{ url_for('static', filename='img/ani.png') }}" alt="Aniekan Okono">
+    </div>
+    <div class="col-md-10">
+  	  <h4>Aniekan Okono ({{_('Cofounder')}})</h4>
+      <div class="btn-group">
+        <a href="https://twitter.com/anioko1" target="_blank"><i class="fa fa-twitter-square"></i></a>
+        <a href="https://www.facebook.com/aokono" target="_blank"><i class="fa fa-facebook-square"></i></a>
+        <a href="https://www.linkedin.com/pub/aniekan-okono/2b/b72/686" target="_blank"><i class="fa fa-linkedin-square"></i></a>
+        <a href="mailto:info@intern.ly"><i class="fa fa-envelope-square"></i></a>
+      </div>
+      <p>{{_('Aniekan has been an entrepreneur for a while, he currently lives in Helsinki, Finland. He is enthusiastic about the use of technology to solve problems. He plays football during his spare time.')}}</p>
+
+    </div>
+  </div>
+  <div class="cofounder">
+    <div class="col-md-2">
+      <img src="{{ url_for('static', filename='img/jarmo.png') }}" alt="Jarmo Hakulinen">
+    </div>
+    <div class="col-md-10">
+      <h4>Jarmo Hakulinen ({{_('Cofounder')}})</h4>
+      <div class="btn-group">
+        <a href="https://twitter.com/jarmohak" target="_blank"><i class="fa fa-twitter-square"></i></a>
+        <a href="https://www.facebook.com/jarmo.hakulinen" target="_blank"><i class="fa fa-facebook-square"></i></a>
+        <a href="https://www.linkedin.com/in/jarmohakulinen" target="_blank"><i class="fa fa-linkedin-square"></i></a>
+        <a href="mailto:Jarmo.hakulinen@intern.ly"><i class="fa fa-envelope-square"></i></a>
+      </div>
+      <p>{{_('Jarmo works as a team leader and CFO in Internly. He is enthusiastic about technology, innovations and new businesses. He has been an entrepreneur since 2010.')}}</p>
+    </div>
+  </div>
+</div>------>
+
+
+
+
+<div class="center_w_margin">
+  <div class="btn-group">
+    <button class="btn btn-default disabled">
+      Share:
+    </button>
+
+    <a href="http://www.facebook.com/sharer.php?u=http%3A%2F%2Fintern.ly&amp;t=Url%20Encoded%20Text" title="On Facebook" target="_blank" class="btn btn-default">
+      <i class="fa fa-facebook fa-lg fb"></i>
+    </a>
+
+    <a href="http://twitter.com/share?url=http%3A%2F%2Fintern.ly&amp;text=Url%20Encoded%20Text" title="On Twitter" target="_blank" class="btn btn-default">
+      <i class="fa fa-twitter fa-lg tw"></i>
+    </a>
+
+
+    <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http%3A%2F%2Fintern.ly" title="On LinkedIn" target="_blank" class="btn btn-default">
+      <i class="fa fa-linkedin fa-lg linkin"></i>
+    </a>
+
+    <a href="http://vk.com/share.php?url=http%3A%2F%2Fintern.ly&amp;title=Url%20Encoded%20Title&amp;description=Url%20Encoded%20Text&amp;image=https%3A%2F%2Ffbcdn-sphotos-g-a.akamaihd.net%2Fhphotos-ak-frc3%2Ft1%2F10007500_219483098251971_1640217409_n.jpg" title="On VK.com" target="_blank" class="btn btn-default">
+      <i class="fa fa-vk fa-lg vk"></i>
+    </a>
+
+    <a href="http://www.pinterest.com/pin/create/button/?url=http%3A%2F%2Fintern.ly&amp;description=Url%20Encoded%20Text&amp;media=https%3A%2F%2Ffbcdn-sphotos-g-a.akamaihd.net%2Fhphotos-ak-frc3%2Ft1%2F10007500_219483098251971_1640217409_n.jpg" title="Pin It" target="_blank" class="btn btn-default">
+      <i class="fa fa-pinterest fa-lg pinterest"></i>
+    </a>
+  </div>
+</div>
+
+ <footer role="contentinfo" class="bs-docs-footer">
+
+ <div class="container text-center">
+    <hr />
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="col-md-3">
+        <ul class="nav nav-pills nav-stacked">
+          <li><a href="/job-opportunities-for-foreigners-in-brazil'">Job opportunities for foreigners in Brazil</a></li>
+          <li><a href="/jobs-opportunities-for-foreigners-in-australia">Jobs opportunities for foreigners in Australia</a></li>
+		  <li><a href="/job-opportunities-for-foreigners-in-denmark">Jobs opportunities for foreigners in Denmark</a></li>
+          <li><a href="/job opportunities for foreign workers in canada">Jobs opportunities for foreign  workers in Canada</a></li>
+          <li><a href="/job-opportunities-for-foreigners-in-germany">Jobs opportunities for foreigners in Germany</a></li>
+          <li><a href="/Jjob-opportunities-for-foreigners-in-south africa">Jobs opportunities for foreigners in South Africa</a></li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <ul class="nav nav-pills nav-stacked">
+          <li><a href="/job-opportunities-for-foreigners-in-turkey">Jobs opportunities for foreigners in Turkey</a></li>
+	   <li><a href="/job-opportunities-for-foreigners-in-switzerland">Jobs opportunities for foreigners in Switzerland</a></li>
+	   <li><a href="/job-opportunities-for-foreigners-in-sweden">Jobs opportunities for foreigners in Sweden</a></li>
+          <li><a href="/job-opportunities-for-foreigners-in-malaysia">Jobs opportunities for foreigners in Malaysia</a></li>
+          <li><a href="/job-opportunities-for-foreigners-in-japan">Jobs opportunities for foreigners in Japan</a></li>
+	   <li><a href="/job-opportunities-for-foreigners-in-dubai">Jobs opportunities for foreigners in Dubai</a></li>
+
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <ul class="nav nav-pills nav-stacked">
+         <li><a href="/job-opportunities-for-foreigners-in-new zealand">Jobs opportunities for foreigners in New Zealand</a></li> 
+         <li><a href="/australian-job-opportunities-for-foreigners"> Australian jobs opportunities for foreigners</a></li> 
+	  <li><a href="/job-opportunities-for-foreigners-in-south korea">Jobs opportunities for foreigners in South Korea</a></li>
+         <li><a href="/job-opportunities-for-foreigners-in-singapore">Jobs opportunities for foreigners in Singapore</a></li>
+         <li><a href="/job-opportunities-for-foreign-medical-graduates">Jobs opportunities for foreigner medical graduates</a></li>
+         <li><a href="/job opportunities-in-foreign-countries">Jobs opportunities in foreign countries/a></li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <ul class="nav nav-pills nav-stacked">
+          <li><a href="/job-opportunities-for-foreigners-in-usa">Jobs opportunities for foreigners in USA/a></li>
+          <li><a href="/job-opportunities-for-foreigners-in-canada">Jobs opportunities for foreigners in Canada</a></li>
+        </ul> 
+    </div>
+  </div>
+  <hr>
+    <div class="row">
+        <div class="col-lg-12">
+            <ul class="nav nav-pills nav-justified">
+                <!----<li><a href="/">Copy Right 2014 Internly Oy.</a></li>---->
+                <!----<li><a href="#">Terms of Service</a></li>----->
+            </ul>
+        </div>
+    </div>
+</div>
+  </div>
+
+</footer>
+
+
+        
+        <!-- JavaScript jQuery code from Bootply.com editor -->
+        
+        <script type='text/javascript'>
+        
+        $(document).ready(function() {
+        
+            /* smooth scrolling for scroll to top */
+$('.scroll-top').click(function(){
+  $('body,html').animate({scrollTop:0},1000);
+})
+/* smooth scrolling for scroll down */
+$('.scroll-down').click(function(){
+  $('body,html').animate({scrollTop:$(window).scrollTop()+800},1000);
+})
+
+/* highlight the top nav as scrolling occurs */
+$('body').scrollspy({ target: '#navbar' })
+
+        
+        });
+        
+        </script>
+        
+ 
+{% endblock %}

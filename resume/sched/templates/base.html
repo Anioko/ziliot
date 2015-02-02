@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Ziliot Job search and recruitment website| Ziliot</title>
+
+	
+	<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+<style>
+
+.navbar-inverse{
+    background-color: #2C3E50;
+    border-color: #080808;
+}
+.navbar-inverse {
+    background-image: linear-gradient(to bottom, #3C3C3C 0px, #2C3E50 100%);
+    background-repeat: repeat-x;
+}
+</style>
+
+    <script>
+      $(function() {
+        $(".resume-delete-link").on("click", function() {
+          var delete_url = $(this).attr('data-delete-url');
+          $.ajax({
+            url: delete_url,
+            type: 'DELETE',
+            success: function(response) {
+              if (response.status == 'OK') {
+                window.location = {{ url_for('resumes_list') }};
+              } else {
+                alert('Delete failed.')
+              }
+            }
+          });
+          return false;
+        });
+      });
+    </script>
+    {% block extra_head %}{% endblock extra_head %}
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <!----<a href="#" ><img src="../static/img/jobisoft.1.png" height="42"> </a>----->
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+          </ul>
+		  		{% if current_user.is_authenticated() %}
+          <ul class="nav navbar-nav">
+			<li><a href="{{ url_for('resumes_list') }}"> My Resume</a></li>
+			<li><a href="{{ url_for('resume_create') }}">Create Resume</a></li>
+			<li><a href="{{ url_for('all_resumes') }}">All Resumes</a></li>
+          </ul>
+		    <ul class="nav pull-right">
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{ current_user.email }} <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="{{url_for('landing_page', lang_code='en')}}"><img src="../static/img/gb.png" height="12"></a></li>
+                  <li><a href="{{url_for('landing_page', lang_code='fi')}}"><img src="../static/img/fi.png" height="12"></a></li>
+                  <li><a href="{{ url_for('logout') }}">Logout</a></li>
+                </ul>
+              </li>
+            </ul>
+            {% else %}
+            <ul class="nav pull-right">
+              <li><a href="{{ url_for('login') }}">Login</a></li>
+            </ul>
+            {% endif %}
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+	  	
+    <div class="container" style="width: 600px; margin-top: 100px;">
+    {% block main %}{% endblock main %}
+      <div class="starter-template">
+
+      </div>
+
+    </div><!-- /.container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+    
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-18497297-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
+  </body>
+</html>
+

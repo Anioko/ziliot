@@ -1,0 +1,639 @@
+# Finnish translations for PROJECT.
+# Copyright (C) 2014 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2014.
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2014-12-01 15:19+0200\n"
+"PO-Revision-Date: 2014-11-04 12:52+0200\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: fi <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 1.3\n"
+
+#: resume/sched/app.py:459
+msgid ""
+"This website works better with the latest version of Firefox or try to "
+"install Chrome. Thanks!"
+msgstr ""
+"Tämä verkkosivusto vaatii uusimman version Firefoxista, tai Google "
+"Chromesta."
+
+#: resume/sched/app.py:652
+msgid "You have <strong>already applied</strong> for this position."
+msgstr "<strong>Olet jo hakenut tätä paikkaa</strong>"
+
+#: resume/sched/templates/layout.html:12
+msgid "Interns and Entry level job"
+msgstr "Työharjoittelupaikat, sekä työpaikat vastavalmistuneille"
+
+#: resume/sched/templates/layout.html:50
+msgid "Toggle navigation"
+msgstr ""
+
+#: resume/sched/templates/layout.html:58
+#: resume/sched/templates/public/public.html:121
+msgid "Home"
+msgstr "Etusivu"
+
+#: resume/sched/templates/layout.html:59
+msgid "Employers"
+msgstr "Työnantajat"
+
+#: resume/sched/templates/layout.html:60
+#: resume/sched/templates/public/public.html:122
+msgid "About"
+msgstr ""
+
+#: resume/sched/templates/layout.html:61
+msgid "Blog"
+msgstr ""
+
+#: resume/sched/templates/layout.html:62
+#: resume/sched/templates/public/public.html:124
+msgid "Policy"
+msgstr ""
+
+#: resume/sched/templates/layout.html:64
+#: resume/sched/templates/public/public.html:80
+msgid "Vacancies"
+msgstr "Työpaikat"
+
+#: resume/sched/templates/layout.html:82
+#: resume/sched/templates/error/base.html:55
+#: resume/sched/templates/public/public.html:115
+msgid "Logout"
+msgstr "Kirjaudu Ulos"
+
+#: resume/sched/templates/layout.html:90
+#: resume/sched/templates/public/public.html:130
+msgid "Sign up"
+msgstr "Rekisteröidy"
+
+#: resume/sched/templates/layout.html:91
+#: resume/sched/templates/error/base.html:62
+#: resume/sched/templates/public/public.html:131
+msgid "Login"
+msgstr "Kirjaudu Sisään"
+
+#: resume/sched/templates/layout.html:109
+msgid "Get Trainee positions, Entry-Level Jobs and more"
+msgstr ""
+"Löydä työharjoittelupaikka korkeakouluopintojasi varten tai ensimmäinen "
+"oman alasi työpaikka!"
+
+#: resume/sched/templates/layout.html:110
+msgid "One resume - endless opportunities!"
+msgstr "Tavoita useita sopivia työnantajia yhdellä hakemuksella!"
+
+#: resume/sched/templates/layout.html:111
+msgid "Sign up for free"
+msgstr "Rekisteröidy ilmaiseksi"
+
+#: resume/sched/templates/layout.html:113
+msgid "Sign Up"
+msgstr "Rekisteröidy"
+
+#: resume/sched/templates/layout.html:124
+msgid "Simple"
+msgstr "Yksinkertainen"
+
+#: resume/sched/templates/layout.html:125
+msgid ""
+"Create professional CV using our online service on this site. We will "
+"guide you\n"
+"                through the process. Check this "
+msgstr "Luo ammattimainen CV sivuillamme. Tämä "
+
+#: resume/sched/templates/layout.html:126
+msgid "first, and then let’s get started! "
+msgstr "opastaa sinut alkuun."
+
+#: resume/sched/templates/layout.html:130
+msgid "Use LinkedIn to register"
+msgstr "Rekisteröidy käyttäen Linkedlniä"
+
+#: resume/sched/templates/layout.html:131
+msgid ""
+"You can import all the information needed for your CV from your LinkedIn "
+"profile. No hassle and no re-typing."
+msgstr "Nyt voit lisätä lähes kaikki tietosi suoraan LinkedInistä."
+
+#: resume/sched/templates/layout.html:135
+msgid "Add a Resume"
+msgstr "Lisää ansioluettelosi"
+
+#: resume/sched/templates/layout.html:136
+msgid "Create one resume to apply to multiple positions."
+msgstr "Luo CV, jolla voit hakea useita työpaikkoja ja työharjoittelupaikkoja."
+
+#: resume/sched/templates/layout.html:153
+msgid "Find employees for entry level positions and interns for your company"
+msgstr ""
+"Löydä työharjoittelijoita ja vastavalmistuneita työntekijöitä "
+"yrityksellesi"
+
+#: resume/sched/templates/layout.html:154
+msgid "Hundreds of applicants are already looking to work for you!"
+msgstr "Sadat hakijat etsivät töitä, työskennelläkseen juuri sinulle!"
+
+#: resume/sched/templates/layout.html:155
+msgid "Starter account is free of charge"
+msgstr "Aloitusprofiili on maksuton"
+
+#: resume/sched/templates/layout.html:160
+#: resume/sched/templates/layout.html:166
+msgid "Free"
+msgstr "Ilmainen"
+
+#: resume/sched/templates/layout.html:161
+msgid "post/month"
+msgstr "ilmoitus/kk"
+
+#: resume/sched/templates/layout.html:162
+#: resume/sched/templates/layout.html:176
+#: resume/sched/templates/layout.html:189
+#: resume/sched/templates/account/company_subs.html:319
+#: resume/sched/templates/account/company_subs.html:332
+#: resume/sched/templates/account/company_subs.html:380
+msgid "No messaging"
+msgstr "Ei yksityisviestejä"
+
+#: resume/sched/templates/layout.html:163
+#: resume/sched/templates/layout.html:177
+#: resume/sched/templates/account/company_subs.html:320
+msgid "No search"
+msgstr "Ei hakua"
+
+#: resume/sched/templates/layout.html:164
+#: resume/sched/templates/layout.html:178
+#: resume/sched/templates/layout.html:191
+#: resume/sched/templates/layout.html:204
+#: resume/sched/templates/layout.html:217
+#: resume/sched/templates/account/company_subs.html:321
+#: resume/sched/templates/account/company_subs.html:334
+#: resume/sched/templates/account/company_subs.html:347
+#: resume/sched/templates/account/company_subs.html:360
+#: resume/sched/templates/account/company_subs.html:382
+#: resume/sched/templates/account/company_subs.html:397
+#: resume/sched/templates/account/company_subs.html:412
+msgid "Download CV"
+msgstr "Lataa CV"
+
+#: resume/sched/templates/layout.html:165
+msgid "Post duration 7 days"
+msgstr "Ilmoituksen kesto 7 päivää"
+
+#: resume/sched/templates/layout.html:169
+#: resume/sched/templates/layout.html:182
+#: resume/sched/templates/layout.html:195
+#: resume/sched/templates/layout.html:208
+#: resume/sched/templates/layout.html:221
+
+msgid "Sign Up now!"
+msgstr "Rekisteröidy!"
+
+#: resume/sched/templates/layout.html:174
+#: resume/sched/templates/account/company_subs.html:317
+msgid "Basic"
+msgstr "Vakio"
+
+#: resume/sched/templates/layout.html:175
+#: resume/sched/templates/layout.html:188
+#: resume/sched/templates/layout.html:201
+#: resume/sched/templates/account/company_subs.html:318
+#: resume/sched/templates/account/company_subs.html:331
+#: resume/sched/templates/account/company_subs.html:344
+#: resume/sched/templates/account/company_subs.html:379
+#: resume/sched/templates/account/company_subs.html:394
+msgid "posts/month"
+msgstr "ilmoitusta/kk"
+
+#: resume/sched/templates/layout.html:179
+#: resume/sched/templates/account/company_subs.html:322
+msgid "Post duration 14 days"
+msgstr "Ilmoituksen kesto 14 päivää"
+
+#: resume/sched/templates/layout.html:180
+#: resume/sched/templates/layout.html:193
+#: resume/sched/templates/layout.html:206
+#: resume/sched/templates/layout.html:219
+#: resume/sched/templates/account/company_subs.html:323
+#: resume/sched/templates/account/company_subs.html:336
+#: resume/sched/templates/account/company_subs.html:349
+#: resume/sched/templates/account/company_subs.html:362
+#: resume/sched/templates/account/company_subs.html:384
+#: resume/sched/templates/account/company_subs.html:399
+#: resume/sched/templates/account/company_subs.html:414
+msgid "/month"
+msgstr "/kk"
+
+#: resume/sched/templates/layout.html:187
+#: resume/sched/templates/account/company_subs.html:330
+#: resume/sched/templates/account/company_subs.html:378
+msgid "Silver"
+msgstr "Hopea"
+
+#: resume/sched/templates/layout.html:190
+#: resume/sched/templates/layout.html:203
+#: resume/sched/templates/layout.html:216
+#: resume/sched/templates/account/company_subs.html:333
+#: resume/sched/templates/account/company_subs.html:346
+#: resume/sched/templates/account/company_subs.html:359
+#: resume/sched/templates/account/company_subs.html:381
+#: resume/sched/templates/account/company_subs.html:396
+#: resume/sched/templates/account/company_subs.html:411
+msgid "Track applicants"
+msgstr "Näe työnhakijat"
+
+#: resume/sched/templates/layout.html:192
+#: resume/sched/templates/account/company_subs.html:335
+#: resume/sched/templates/account/company_subs.html:383
+msgid "Post duration 21 days"
+msgstr "Ilmoituksen kesto 21 päivää"
+
+#: resume/sched/templates/layout.html:200
+#: resume/sched/templates/account/company_subs.html:343
+#: resume/sched/templates/account/company_subs.html:393
+msgid "Gold"
+msgstr "Kulta"
+
+#: resume/sched/templates/layout.html:202
+#: resume/sched/templates/layout.html:215
+#: resume/sched/templates/account/company_subs.html:345
+#: resume/sched/templates/account/company_subs.html:358
+#: resume/sched/templates/account/company_subs.html:395
+#: resume/sched/templates/account/company_subs.html:410
+msgid "Message all applicants"
+msgstr "Lähetä viesti kaikille hakijoille"
+
+#: resume/sched/templates/layout.html:205
+#: resume/sched/templates/layout.html:218
+#: resume/sched/templates/account/company_subs.html:348
+#: resume/sched/templates/account/company_subs.html:361
+#: resume/sched/templates/account/company_subs.html:398
+#: resume/sched/templates/account/company_subs.html:413
+msgid "Post duration 30 days"
+msgstr "Ilmoituksen kesto 30 päivää"
+
+#: resume/sched/templates/layout.html:213
+#: resume/sched/templates/account/company_subs.html:356
+#: resume/sched/templates/account/company_subs.html:408
+msgid "Platinum"
+msgstr "Platina"
+
+#: resume/sched/templates/layout.html:214
+#: resume/sched/templates/account/company_subs.html:357
+#: resume/sched/templates/account/company_subs.html:409
+msgid "Unlimited"
+msgstr "Rajoittamaton"
+
+#: resume/sched/templates/layout.html:237
+msgid "Find Right Candidates"
+msgstr "Löydä Sopivimmat Hakijat"
+
+#: resume/sched/templates/layout.html:238
+msgid ""
+"Post your vacancies. Sort applicants by skills and location. Track "
+"applications.\n"
+"          Looking for researchers and thesis workers? We’ve got you "
+"covered!"
+msgstr ""
+
+"Ilmoita avoimista työpaikoista, hae työntekijöitä sijainnin sekä"
+"taitojen perusteella, ja seuraa hakemuksia."
+
+#: resume/sched/templates/layout.html:243
+msgid "Recruiters & HR Professionals"
+msgstr "Rekrytoijat ja HR-ammattilaiset"
+
+#: resume/sched/templates/layout.html:244
+msgid ""
+"Post your vacancies for interns or entry level workers. Receive CVs on "
+"Internly and download CVs. Suitable for your CV bank. "
+msgstr ""
+"Luo ilmoituksesi työharjoittelijoille ja vastavalmistuneille. Saat "
+"hakemukset Internlyn kautta, josta voit ladata ne sopivasti omaan CV "
+"tietokantaanne."
+
+#: resume/sched/templates/account/company_subs.html:313
+#: resume/sched/templates/account/company_subs.html:371
+msgid "Upgrade subscription. Currently, you are using"
+msgstr ""
+
+#: resume/sched/templates/account/company_subs.html:313
+#: resume/sched/templates/account/company_subs.html:371
+msgid "account."
+msgstr ""
+
+#: resume/sched/templates/account/company_subs.html:313
+msgid "Please subscribe to one of these plans"
+msgstr ""
+
+#: resume/sched/templates/account/company_subs.html:325
+#: resume/sched/templates/account/company_subs.html:338
+#: resume/sched/templates/account/company_subs.html:351
+#: resume/sched/templates/account/company_subs.html:364
+msgid "Subscribe"
+msgstr ""
+
+#: resume/sched/templates/account/company_subs.html:371
+msgid "Please upgrade to"
+msgstr ""
+
+#: resume/sched/templates/account/company_subs.html:386
+#: resume/sched/templates/account/company_subs.html:401
+#: resume/sched/templates/account/company_subs.html:416
+#: resume/sched/templates/public/public.html:94
+msgid "Upgrade"
+msgstr "Päivitä Tilauksesi"
+
+#: resume/sched/templates/account/upgrade.html:52
+msgid ""
+"Upgrade Subscription: Click on the link of the plan you want to upgrade "
+"to."
+msgstr "Päivitä tilauksesi: Valitse itsellesi sopivin kuukausimaksu "
+
+#: resume/sched/templates/error/base.html:61
+msgid "Signup"
+msgstr "Rekisteröidy"
+
+#: resume/sched/templates/public/about.html:48
+msgid "What is Internly"
+msgstr ""
+
+#: resume/sched/templates/public/about.html:50
+msgid ""
+"is an online recruitment portal, which is match-making companies, and "
+"people in need of work. Our vision is to become #1 in Europe when it "
+"comes recruiting interns, entry- level workers and experienced "
+"professionals. We make it easier for companies to find applicants for "
+"their needs."
+msgstr ""
+
+#: resume/sched/templates/public/about.html:53
+msgid "Why?"
+msgstr ""
+
+#: resume/sched/templates/public/about.html:53
+msgid ""
+"It takes average of 6 seconds for recruiter to read a resume, or CV. When"
+" there are hundreds or even thousands of applicants, it will take huge "
+"amount of time to go through them. We shorten that time, and only show "
+"the best fitting applicants for recruiters."
+msgstr ""
+
+#: resume/sched/templates/public/about.html:56
+msgid "How?"
+msgstr ""
+
+#: resume/sched/templates/public/about.html:56
+msgid ""
+"Applicant creates a CV, which only has the most necessary information for"
+" recruiters. Applicants use one-click ”Apply Now” system, to numerous "
+"open positions. The recruiter sees only those, who are fitting for the "
+"position, and can download all CVs that seems interesting for their "
+"needs."
+msgstr ""
+
+#: resume/sched/templates/public/about.html:68
+#: resume/sched/templates/public/about.html:84
+msgid "Cofounder"
+msgstr ""
+
+#: resume/sched/templates/public/about.html:75
+msgid ""
+"Aniekan has been an entrepreneur for a while, he currently lives in "
+"Helsinki, Finland. He is enthusiastic about the use of technology to "
+"solve problems. He plays football during his spare time."
+msgstr ""
+
+#: resume/sched/templates/public/about.html:91
+msgid ""
+"Jarmo works as a team leader and CFO in Internly. He is enthusiastic "
+"about technology, innovations and new businesses. He has been an "
+"entrepreneur since 2010."
+msgstr ""
+
+#: resume/sched/templates/public/policy.html:71
+msgid ""
+"Intern.ly  is operated in Europe by or on behalf of Internly Oy , a "
+"company incorporated in Finland with registered company number "
+"FI2641548-2   , our office at Energiakuja 3, 00180, Helsinki Finland, 3rd"
+" floor.  \n"
+"                  This policy is designed to protect your privacy and to "
+"help you understand, how we collect and use your personal information. \n"
+"                  By submitting a job application, the applicant approves"
+" the storing and use of the submitted data. Personal data protection in "
+"accordance with Section 10 of the Personal Data Act (HetiL 10§)."
+msgstr ""
+
+#: resume/sched/templates/public/policy.html:75
+msgid "Right of access:"
+msgstr ""
+
+#: resume/sched/templates/public/policy.html:77
+msgid ""
+"In accordance with Section 26§ of the Personal Data Act, everyone has the"
+" right to inspect what information related to their person has been "
+"stored in the register. Any request to inspect the register shall be "
+"delivered in writing, with the requesting party’s signature to  "
+"info@intern.ly"
+msgstr ""
+
+#: resume/sched/templates/public/policy.html:79
+msgid "Purpose of processing of personal data:"
+msgstr ""
+
+#: resume/sched/templates/public/policy.html:80
+msgid ""
+"The register is intended for receiving, processing and storing the job "
+"applications of persons interested in pursuing a career with our client "
+"companies.  Applicants may apply for a particular position or fill out "
+"their resumes for search by our clients and human resources personnel may"
+" also process an application in connection with other suitable positions."
+"\n"
+"  Job application data is kept in an applicant register for three (4) "
+"years and may be retrieved in connection with other positions."
+msgstr ""
+
+#: resume/sched/templates/public/policy.html:81
+msgid ""
+"Job application data is always confidential and is never disclosed to "
+"persons outside the recruitment process. Confidentiality refers to the "
+"fact that job application data is only available to persons authorized to"
+" process the data.\n"
+"  Internly Oy may at its discretion remove any job application with "
+"incomplete information."
+msgstr ""
+
+#: resume/sched/templates/public/policy.html:82
+msgid ""
+"An application may also be removed or altered at the applicant’s request."
+" Any request to remove or alter an application shall be delivered in "
+"writing to the controller or presented in person at the controller’s "
+"address."
+msgstr ""
+
+#: resume/sched/templates/public/policy.html:84
+msgid "Registered data:"
+msgstr ""
+
+#: resume/sched/templates/public/policy.html:85
+msgid "Applicant’s basic information (name, contact information, date of birth)"
+msgstr ""
+
+#: resume/sched/templates/public/policy.html:86
+msgid "Applicant’s education and work experience"
+msgstr ""
+
+#: resume/sched/templates/public/policy.html:87
+msgid "Applicant’s preferences regarding future employment"
+msgstr ""
+
+#: resume/sched/templates/public/policy.html:88
+msgid "Description of applicant’s experience"
+msgstr ""
+
+#: resume/sched/templates/public/policy.html:89
+msgid "Additional information provided by the applicant"
+msgstr ""
+
+#: resume/sched/templates/public/policy.html:90
+msgid "Sources of data:"
+msgstr ""
+
+#: resume/sched/templates/public/policy.html:91
+msgid "Job applicants"
+msgstr "Näe työnhakijat"
+
+#: resume/sched/templates/public/policy.html:92
+msgid "Regular transfers of disclosed data:"
+msgstr ""
+
+#: resume/sched/templates/public/policy.html:93
+msgid "The data will be disclosed to clients outside Internly Oy  ."
+msgstr ""
+
+#: resume/sched/templates/public/policy.html:94
+msgid "Transfer of data outside the EU/EEA:"
+msgstr ""
+
+#: resume/sched/templates/public/policy.html:95
+msgid ""
+"The data will be transferred clients outside the European Union or the "
+"European Economic Area."
+msgstr ""
+
+#: resume/sched/templates/public/policy.html:96
+msgid "Principles of data protection:"
+msgstr ""
+
+#: resume/sched/templates/public/policy.html:97
+msgid "A. Hard copies"
+msgstr ""
+
+#: resume/sched/templates/public/policy.html:98
+msgid ""
+"Printed paper versions of CVs are stored together with other recruitment "
+"material."
+msgstr ""
+
+#: resume/sched/templates/public/policy.html:99
+msgid "B. Electronically stored data:"
+msgstr ""
+
+#: resume/sched/templates/public/policy.html:100
+msgid ""
+"The registered data are protected using passwords. Only employees and "
+"clients of Internly Oy  or its subsidiaries have access to personal data "
+"stored in the register. "
+msgstr ""
+
+#: resume/sched/templates/public/public.html:71
+msgid "Activate company membership"
+msgstr ""
+
+#: resume/sched/templates/public/public.html:73
+#: resume/sched/templates/public/public.html:83
+#: resume/sched/templates/public/public.html:104
+msgid "Contact"
+msgstr ""
+
+#: resume/sched/templates/public/public.html:78
+msgid "My Resume"
+msgstr "Sinun Ansioluettelosi"
+
+#: resume/sched/templates/public/public.html:79
+msgid "Create Resume"
+msgstr "Luo Hakemus"
+
+#: resume/sched/templates/public/public.html:87
+
+msgid "Vacancies"
+msgstr "Työpaikat"
+
+#: resume/sched/templates/public/public.html:88
+msgid "Add vacancy"
+msgstr "Lisää Työpaikka"
+
+#: resume/sched/templates/public/public.html:92
+
+msgid "Subscription"
+msgstr "Tilauksen Tiedot"
+
+#: resume/sched/templates/public/public.html:95
+msgid "Cancel "
+msgstr "Peruuta"
+
+#~ msgid "Register Easily"
+#~ msgstr "Helppo Rekisteröityminen"
+
+#~ msgid "One (1) post per month"
+#~ msgstr "Yksi (1) ilmoitus kuukaudessa"
+
+#~ msgid "Find employees for entry level positions based on skills and location. "
+#~ msgstr "Löydä työnhakijoita taitojen ja sijainnin perusteella."
+
+#~ msgid "Post your vacancies and also track the applicants. Looking for "
+#~ msgstr ""
+
+#~ msgid "researchers and thesis workers? We got you covered! "
+#~ msgstr "Löydä työnhakijoita taitojen ja sijainnin perusteella."
+
+#~ msgid "LinkedIn support"
+#~ msgstr ""
+
+#~ msgid "Your Resume"
+#~ msgstr "Sinun Ansioluettelosi"
+
+#~ msgid ""
+#~ msgstr ""
+
+#~ msgid "The data will be disclosed to clients outside Konor Dev.co ."
+#~ msgstr ""
+
+#~ msgid "2 posts/month"
+#~ msgstr "Kaksi (2) ilmoitusta kuukaudessa"
+
+#~ msgid "3 posts/month"
+#~ msgstr "Kolme (3) ilmoitusta kuukaudessa"
+
+#~ msgid "5 posts/month"
+#~ msgstr "Viisi (5) ilmoitusta kuukaudessa"
+
+#~ msgid "Please subscribe to one of these plans"
+#~ msgstr "Ole hyvä ja tilaa yksi näistä suunitelmista"
+
+#~ msgid "Subscribe"
+#~ msgstr "Tilaa"
+
+#~ msgid "Please upgrade to"
+#~ msgstr "Ole hyvä päivitä tilauksesi"
+
+

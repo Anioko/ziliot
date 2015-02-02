@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Interns and Entry level job">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
+
+    <title>Harjoittelupaikkoja ja ty√∂paikkoja Suomessa</title>
+    <!-- Bootstrap core CSS -->
+    <!---<link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet">-->
+
+    <!-- Font Awesome CSS -->
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+	<link href="{{ url_for('static', filename='css/bootswatch.css') }}" rel="stylesheet" type="text/css">
+  <link href="{{ url_for('static', filename='css/amatic.css') }}" rel="stylesheet">
+  
+    <script type="text/javascript">
+    var FHChat = {product_id: "9e238e5e5331"};
+    FHChat.properties={};FHChat.set=function(key,data){this.properties[key]=data};!function(){var a,b;return b=document.createElement("script"),a=document.getElementsByTagName("script")[0],b.src="https://chat-client-js.firehoseapp.com/chat-min.js",b.async=!0,a.parentNode.insertBefore(b,a)}();
+  </script>
+  
+    <!---<link href="file:///C|/Documents and Settings/Anioko1/Omat tiedostot/Trial/Intern_reg/static/css/bootswatch.css" rel="stylesheet" type="text/css">-->
+    <style type="text/css">
+
+    </style>
+</head>
+
+  <body role="document">
+
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>          </button>
+          <a class="navbar-brand" href="/">Internly</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/blog">Blog</a></li>
+
+	     <li><a href="/policy">Policy</a></li>
+            {% if current_user.is_authenticated() %}
+             <li><a href="{{ url_for('all_positions') }}">All Vacancies </a></li><!---Public View-->
+
+            <!--<li><a href="#contact">Contact</a></li>-->
+            <!---<li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Openings <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Internships</a></li>
+                <li><a href="#">Thesis and Research Work</a></li>
+                <li><a href="#">Something else here</a></li>
+              </ul>
+            </li>-->
+           {% endif %} 
+          </ul>
+		  {% if current_user.is_authenticated() %}
+		      <ul class="nav navbar-nav navbar-right">
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{ current_user.name }} <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="{{ url_for('logout') }}">Logout</a></li>
+                </ul>
+              </li>
+            </ul>
+			{% else %}
+		  <ul class="nav navbar-nav navbar-right">
+            <li><a href="{{ url_for_security('register') }}">Sign up</a></li>
+            <li><a href="{{ url_for_security('login') }}"><i class="fa fa-unlock"></i> Login</a></li>
+          </ul>
+		  {% endif %}
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <div class="masthead">
+    {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+            {% for category, message in messages %}
+            <div class="alert alert-{{ category }} alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>{{ message|safe }}</div>
+            {% endfor %}
+            {% endif %}
+    {% endwith %}
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1>L√∂yd√§ ty√∂harjoittelupaikka korkeakouluopintojasi varten tai ensimm√§inen oman alasi ty√∂paikka!</h1>
+                    <h3>Tavoita useita sopivia ty√∂nantajia yhdell√§ hakemuksella</h3>
+                    <h4>Rekister√∂idy ilmaiseksi</h4>
+                    </p>
+                    <p><a role="button" class="btn btn-primary btn-lg" href="/signup">Rekister√∂idy</a></p>
+              </div>
+            </div>
+        </div>
+    </div>
+
+  <div class="bs-docs-featurette">
+    <div class="container">
+    <div class="row">
+      <div class="col-sm-4">
+        <!---<img class="img-responsive" alt="" src="assets/img/sass-less.png">-->
+        <h3><i class="fa fa-check-square-o"></i> Yksinkertainen</h3>
+         <p>Luo ammattimainen CV sivuillamme.
+T√§m√§ <a href="https://www.youtube.com/watch?v=QVdG4o5M_zc" target="_blank"><i class="fa fa-youtube-play"></i> video</a> opastaa sinut alkuun.</p>
+      </div>
+      <div class="col-sm-4">
+        <!---<img class="img-responsive" alt="" src="assets/img/devices.png">-->
+        <h3><i class="fa fa-linkedin-square"></i> Kirjaudu k√§ytt√§en Linkedlni√§</h3>
+        <p>Nyt voit lis√§t√§ l√§hes kaikki tietosi suoraan LinkedInist√§.</p>
+      </div>
+      <div class="col-sm-4">
+        <!---<img class="img-responsive" alt="" src="assets/img/components.png">-->
+        <h3><i class="fa fa-file-text-o"></i> Lis√§√§ ansioluottelosi</h3>
+        <p>Luo CV, jolla voit hakea useita ty√∂paikkoja ja ty√∂harjoittelupaikkoja.</p>
+      </div>
+    </div>
+    </div>
+  </div>
+
+    <div class="masthead company">
+    {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+            {% for category, message in messages %}
+            <div class="alert alert-{{ category }} alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>{{ message|safe }}</div>
+            {% endfor %}
+            {% endif %}
+    {% endwith %}
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1>L√∂yd√§ ty√∂harjoittelijoita ja vastavalmistuneita ty√∂ntekij√∂it√§ yrityksellesi</h1>
+                    <h3></h3>
+                    <h4>Aloitusprofiili on maksuton</h4>
+                    </p>
+			 <!-- new code for company account option -->
+            <div class="pre_pricing">
+            <div class="pricing">
+              <h2>Ilmainen</h2>
+              <div class="posts">1 ilmoitus/kk</div>
+              <div>Ei yksityisviestej‰</div>
+              <div>Ei hakua</div>
+              <div>Lataa CV</div>
+              <div>Ilmoituksen kesto 7 p‰iv‰‰</div>
+              <div class="price">Ilmainen</div>
+            </div>
+            <a role="button" class="btn btn-primary btn-lg btn2 free" href="/signup/free">
+            Rekisterˆidy!</a>
+          </div>
+          
+          <div class="pre_pricing">
+            <div class="pricing">
+              <h2>Vakio</h2>
+              <div class="posts">2 ilmoitusta/kk</div>
+              <div>Ei yksityisviestej‰</div>
+              <div>Ei hakua</div>
+              <div>Lataa CV</div>
+              <div>Ilmoituksen kesto 14 p‰iv‰‰</div>
+              <div class="price">10&euro;/kk</div>
+            </div>
+            <a role="button" class="btn btn-primary btn-lg btn2 basic" href="/signup/basic">Rekisterˆidy!</a>
+          </div>
+          
+          <div class="pre_pricing">
+            <div class="pricing">
+              <h2>Hopea</h2>
+              <div class="posts">3 ilmoitusta/kk</div>
+              <div>Ei yksityisviestej‰</div>
+              <div>N‰e tyˆnhakijat</div>
+              <div>Lataa CV</div>
+              <div>Ilmoituksen kesto 21 p‰iv‰‰</div>
+              <div class="price">50&euro;/kk</div>
+            </div>
+            <a role="button" class="btn btn-primary btn-lg btn2 silver" href="/signup/silver">Rekisterˆidy!</a>
+          </div>
+            
+          <div class="pre_pricing">
+            <div class="pricing">
+              <h2>Kulta</h2>
+              <div class="posts">5 ilmoitusta/kk</div>
+              <div>L‰het‰ viesti kaikille hakijoille</div>
+              <div>N‰e tyˆnhakijat</div>
+              <div>Lataa CV</div>
+              <div>Ilmoituksen kesto 30 p‰iv‰‰</div>
+              <div class="price">90&euro;/kk</div>
+            </div>
+            <a role="button" class="btn btn-primary btn-lg btn2 gold" href="/signup/gold">Rekisterˆidy!</a>
+          </div>
+            
+          <div class="pre_pricing">
+            <div class="pricing">
+              <h2>Platina</h2>
+              <div class="posts">Rajoittamaton</div>
+              <div>L‰het‰ viesti kaikille hakijoille</div>
+              <div>N‰e tyˆnhakijat</div>
+              <div>Lataa CV</div>
+              <div>Ilmoituksen kesto 30 p‰iv‰‰</div>
+              <div class="price">250&euro;/kk</div>
+            </div>
+            <a role="button" class="btn btn-primary btn-lg btn2 platinum" href="/signup/platinum">Rekisterˆidy!</a>
+          </div>
+                    <!--new code end here-->
+                    <p><a role="button" class="btn btn-primary btn-lg" href="/signup">Luo tili</a></p>
+              </div>
+            </div>
+        </div>
+    </div>
+
+
+	<div class="bs-docs-featurette">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6">
+        <!---<img class="img-responsive" alt="" src="assets/img/sass-less.png">-->
+        <h3><i class="fa fa-thumbs-up"></i> L√∂yd√§ yrityksellesi sopivimmat ehdokkaat</h3>
+         <p>Ilmoita vapaista ty√∂paikoista, hae ty√∂ntekij√∂it√§ sijainnin ja taitojen perusteella, ja seuraa hakemuksia. </p>
+      </div>
+      <div class="col-sm-6">
+        <!---<img class="img-responsive" alt="" src="assets/img/devices.png">-->
+        <h3><i class="fa fa-briefcase"></i> Rekrytoijat ja HR-ammattilaiset</h3>
+        <p>Ilmoita ty√∂paikkoja. Saat CV:t suoraan omaan profiiliisi, jossa voit tarkastella CV:t√§ j√§rjestelm√§ss√§mme, tai ladata ne itsellesi.</p>
+      </div>
+    </div>
+</div>
+</div>
+
+<div class="center_w_margin">
+  <div class="btn-group">
+    <button class="btn btn-default disabled">
+      Share:
+    </button>
+
+    <a href="http://www.facebook.com/sharer.php?u=http%3A%2F%2Fintern.ly&amp;t=Url%20Encoded%20Text" title="On Facebook" target="_blank" class="btn btn-default">
+      <i class="fa fa-facebook fa-lg fb"></i>
+    </a>
+
+    <a href="http://twitter.com/share?url=http%3A%2F%2Fintern.ly&amp;text=Url%20Encoded%20Text" title="On Twitter" target="_blank" class="btn btn-default">
+      <i class="fa fa-twitter fa-lg tw"></i>
+    </a>
+
+
+    <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http%3A%2F%2Fintern.ly" title="On LinkedIn" target="_blank" class="btn btn-default">
+      <i class="fa fa-linkedin fa-lg linkin"></i>
+    </a>
+
+    <a href="http://vk.com/share.php?url=http%3A%2F%2Fintern.ly&amp;title=Url%20Encoded%20Title&amp;description=Url%20Encoded%20Text&amp;image=https%3A%2F%2Ffbcdn-sphotos-g-a.akamaihd.net%2Fhphotos-ak-frc3%2Ft1%2F10007500_219483098251971_1640217409_n.jpg" title="On VK.com" target="_blank" class="btn btn-default">
+      <i class="fa fa-vk fa-lg vk"></i>
+    </a>
+
+    <a href="http://www.pinterest.com/pin/create/button/?url=http%3A%2F%2Fintern.ly&amp;description=Url%20Encoded%20Text&amp;media=https%3A%2F%2Ffbcdn-sphotos-g-a.akamaihd.net%2Fhphotos-ak-frc3%2Ft1%2F10007500_219483098251971_1640217409_n.jpg" title="Pin It" target="_blank" class="btn btn-default">
+      <i class="fa fa-pinterest fa-lg pinterest"></i>
+    </a>
+  </div>
+</div>
+<footer class="bs-docs-footer" role="contentinfo">
+    <p>Product of Internly Oy.<a href="#" target="_blank"></a> Made in  Finland <a href="#">2014</a>.</p>
+    <!---<ul class="bs-docs-footer-links muted">
+      <li>Currently v3.1.1</li>
+      <li><a href="#">GitHub</a></li>
+      <li><a href="#">Examples</a></li>
+      <li><a href="#">v2.3.2 docs</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Expo</a></li>
+      <li><a href="/blog">Blog</a></li>
+      <li><a href="">Issues</a></li>
+      <li><a href="">Releases</a></li>
+    </ul>-->
+  </div>
+</footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+	<script src="{{ url_for('static', filename='js/bootstrap.js') }}"></script>
+	<script src="{{ url_for('static', filename='js/bootswatch.js') }}"></script>
+
+	<style>
+  a {
+    text-decoration: none;
+
+  }
+  .bs-docs-featurette a,
+  footer a {
+    color: #5A5A5A;
+    font-weight: bold;
+  }
+  .bs-docs-featurette a:hover,
+  footer a:hover {
+    color: rgb(236, 88, 5);
+    text-decoration: none;
+  }
+  .center_w_margin {
+    width: 255px;
+    margin: 20px auto;
+  }
+  .center_w_margin .btn-group .btn {
+    padding: 8px 10px;
+  }
+
+  .bs-docs-featurette h3 {
+    margin-top: 0;
+  }
+	.navbar-inverse {
+    background-color: #5B6C7E;
+    box-shadow: 0 2px 10px rgba(40,40,40,.2);
+	}
+	.masthead {
+    background: -moz-radial-gradient(center, ellipse cover,  rgba(117,167,204,0.59) 0%, rgba(117,167,204,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(117,167,204,0.59)), color-stop(100%,rgba(117,167,204,1))); /* Chrome,Safari4+ */
+    background: -webkit-radial-gradient(center, ellipse cover,  rgba(117,167,204,0.59) 0%,rgba(117,167,204,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-radial-gradient(center, ellipse cover,  rgba(117,167,204,0.59) 0%,rgba(117,167,204,1) 100%); /* Opera 12+ */
+    background: -ms-radial-gradient(center, ellipse cover,  rgba(117,167,204,0.59) 0%,rgba(117,167,204,1) 100%); /* IE10+ */
+    background: radial-gradient(ellipse at center,  rgba(117,167,204,0.59) 0%,rgba(117,167,204,1) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9675a7cc', endColorstr='#75a7cc',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    color: #FFFFFF;
+    padding: 6em 0;
+    position: relative;
+    text-align: center;
+    box-shadow: inset 0 0 15px rgba(40,40,40,.3);
+    }
+
+  .masthead.company {
+    background: -moz-radial-gradient(center, ellipse cover,  rgba(153,206,88,0.8) 0%, rgba(153,206,88,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(153,206,88,0.8)), color-stop(100%,rgba(153,206,88,1))); /* Chrome,Safari4+ */
+    background: -webkit-radial-gradient(center, ellipse cover,  rgba(153,206,88,0.8) 0%,rgba(153,206,88,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-radial-gradient(center, ellipse cover,  rgba(153,206,88,0.8) 0%,rgba(153,206,88,1) 100%); /* Opera 12+ */
+    background: -ms-radial-gradient(center, ellipse cover,  rgba(153,206,88,0.8) 0%,rgba(153,206,88,1) 100%); /* IE10+ */
+    background: radial-gradient(ellipse at center,  rgba(153,206,88,0.8) 0%,rgba(153,206,88,1) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cc99ce58', endColorstr='#99ce58',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  }
+
+  /** NEW STYLING BEGIN **/
+  .masthead .btn {
+    color: white;
+    font-size: 2em;
+    background-color: transparent;
+    border: 2px solid;
+    border-radius: 3px;
+    padding: 10px 90px;
+    margin-top: 25px; 
+    font-weight: 500;
+    -webkit-transition: color .2s, background .2s, box-shadow .5s;
+    -o-transition: color .2s, background .2s, box-shadow .5s;
+    transition: color .2s, background .2s, box-shadow .5s;
+    box-shadow: 0 0 0 rgba(250,250,250,.3);
+  }
+  .masthead .btn:hover {
+    background-color:  #FFFFFF;
+    color: #75A7CC;
+    border-color: #FFFFFF;
+    box-shadow: 0 0 15px rgba(250,250,250,.6);
+
+  }
+  .masthead.company .btn:hover {
+    background-color:  #FFFFFF;
+    color: #8AC644;
+    border-color: #FFFFFF;
+    box-shadow: 0 0 15px rgba(250,250,250,.6);
+  }
+  .masthead.company .btn {
+    padding: 10px 60px;
+  }
+
+
+	h1 {
+    font-size: 5em;
+    line-height: 1;
+    font-weight: 500;
+  }
+	.intro-marketing {
+    background-color: #FFFFFF;
+    padding-bottom: 3em;
+     }
+	 .bs-docs-featurette {
+    padding-bottom: 100px;
+    padding-top: 100px;
+  }
+  h3 {
+    font-size: 2em;
+  }
+  h4 {
+    font-size: 1.4em;
+  }
+.bs-docs-featurette {
+    background-color: #FFFFFF;
+    color: #5A5A5A;
+    font-size: 16px;
+    line-height: 1.5;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    
+}
+.bs-docs-featurette h3 {
+   text-align: center;
+}
+.bs-docs-featurette p {
+  text-align:justify;
+  font-size: 1.1em;
+
+}
+
+.bs-docs-footer {
+  border-top: 0 none;
+  margin-top: 0;
+}
+.bs-docs-footer {
+
+	background-color: #FFFFFF;
+    color: #777777;
+    margin-top: 20px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    text-align: center;
+}
+
+@media (max-width: 767px) {
+  .bs-docs-featurette .col-sm-4,
+  .bs-docs-featurette .col-sm-6 {
+    text-align: left;
+    
+  }
+  .bs-docs-featurette .col-sm-46 p {
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 450px) {
+  .masthead h1 {
+    margin-top: 0;
+    font-size: 3.7em;
+    text-align: left;
+  }
+  .masthead h3 {
+    font-size: 1.25em;
+    text-align: left;
+  }
+  .masthead h4 {
+    font-size: 1.1em;
+    text-align: left;
+  }
+  .masthead .btn {
+    width: 100%;
+  }
+  .masthead {
+    padding: 60px 0 30px 0;
+  }
+  .masthead.company {
+    padding: 30px 0 30px 0;
+  }
+  .masthead.company .btn {
+    padding: 10px 40px;
+  }
+  .bs-docs-featurette h3 {
+    text-align: left;
+  }
+}
+</style>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-49400370-1', 'intern.ly');
+  ga('send', 'pageview');
+
+</script>
+
+<!-- Facebook Conversion Code for Internly registrations -->
+<script>(function() {
+  var _fbq = window._fbq || (window._fbq = []);
+  if (!_fbq.loaded) {
+    var fbds = document.createElement('script');
+    fbds.async = true;
+    fbds.src = '//connect.facebook.net/en_US/fbds.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(fbds, s);
+    _fbq.loaded = true;
+  }
+})();
+window._fbq = window._fbq || [];
+window._fbq.push(['track', '6019149273463', {'value':'0.00','currency':'USD'}]);
+</script>
+<noscript><img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?ev=6019149273463&amp;cd[value]=0.00&amp;cd[currency]=USD&amp;noscript=1" /></noscript>
+  </body>
+</html>

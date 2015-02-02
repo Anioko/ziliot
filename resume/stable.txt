@@ -1,0 +1,24 @@
+# Use Python 2.7 or Python 3.3.
+
+# Packages at pypi.python.org for use in this project.
+# This file includes package version numbers, for stability.
+# Install with `pip install -r stable.txt`.
+
+Flask==0.10.1
+Flask-Login==0.2.6
+Flask-SQLAlchemy==1.0
+Flask-Script==0.6.2
+Flask-Misaka==0.3.0
+Jinja2==2.7.1
+MarkupSafe==0.18
+SQLAlchemy==0.8.2
+WTForms==1.0.4
+Werkzeug==0.9.3
+itsdangerous==0.23
+
+Flask-Admin==1.0.8
+Pillow==2.4.0
+PyPDF2==1.22
+html5lib==0.999
+reportlab==3.1.8
+xhtml2pdf==0.0.6

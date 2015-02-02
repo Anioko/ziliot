@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Interns and Entry level job">
+    <meta name="author" content="">
+    <meta name="google-site-verification" content="MGFqoknbvICnHZtHgJLbxvjw5V3C47GKUGuHm-JIdnw" />
+    <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
+
+    <!-- Bootstrap core CSS -->
+    <!---<link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet">-->
+
+    <!-- Font Awesome CSS -->
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+	<link href="{{ url_for('static', filename='css/bootswatch.css') }}" rel="stylesheet" type="text/css">
+  <link href="{{ url_for('static', filename='css/style_company_account.css') }}" rel="stylesheet" type="text/css">
+  <link href="{{ url_for('static', filename='css/amatic.css') }}" rel="stylesheet  ">
+
+<link href="{{ url_for('static', filename='css/style_position.css') }}" rel="stylesheet">
+<link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+<link href="{{ url_for('static', filename='css/bootswatch.css') }}" rel="stylesheet" type="text/css">
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <script type="text/javascript">
+    var FHChat = {product_id: "9e238e5e5331"};
+    FHChat.properties={};FHChat.set=function(key,data){this.properties[key]=data};!function(){var a,b;return b=document.createElement("script"),a=document.getElementsByTagName("script")[0],b.src="https://chat-client-js.firehoseapp.com/chat-min.js",b.async=!0,a.parentNode.insertBefore(b,a)}();
+  </script>
+  
+    <!---<link href="file:///C|/Documents and Settings/Anioko1/Omat tiedostot/Trial/Intern_reg/static/css/bootswatch.css" rel="stylesheet" type="text/css">-->
+    <style type="text/css">
+
+    </style>
+</head>
+
+  <body role="document">
+
+
+
+
+    <h1>{{ appt.position_title or '(No Title)' }}</h1>
+    <h2>{{ appt.company_name|default('') }}</h2>
+    <h3><i class="fa fa-globe"></i> <a href="{{ appt.company_website|default('') }}">{{ appt.company_website|default('') }}</a></h3>
+    <h3><i class="fa fa-map-marker"></i> {{ appt.location|default('') }}</h3>
+    <hr>
+    <h4>Job Description</h4>
+    <div class="description">{{ appt.description|default('')|markdown }}</div>
+    <hr>
+    <div class="requirements">
+        <h4>Required skills:</h4>
+        
+        <ul>
+          {% if appt.required_skill_one %}
+            <li>{{ appt.required_skill_one|default('')}}</li>
+          {% else %}
+          {% endif %}
+
+          {% if appt.required_skill_two %}
+            <li>{{ appt.required_skill_two|default('')}}</li>
+          {% else %}
+          {% endif %}
+
+          {% if appt.required_skill_three %}
+            <li>{{ appt.required_skill_three|default('')}}</li>
+          {% else %}
+          {% endif %}
+
+          {% if appt.required_skill_four %}
+            <li>{{ appt.required_skill_four|default('')}}</li>
+          {% else %}
+          {% endif %}
+          
+          {% if appt.required_skill_five %}
+            <li>{{ appt.required_skill_five|default('')}}</li>
+          {% else %}
+          {% endif %}
+
+          {% if appt.required_skill_six %}
+            <li>{{ appt.required_skill_six|default('')}}</li>
+          {% else %}
+          {% endif %}
+        </ul>
+        <a href="http://intern.y/positions/{{appt.id}}/en" target= "_blank"><button type="button" ><i class="fa fa-hand-o-right fa-lg"></i> Apply for this position</button></a>
+        <!--a href="{{ url_for('position_apply', resume_id=1, lang_code= g.current_lang, position_id=appt.id) }}"><button  style="margin-bottom: 20px;" type="button" class="btn btn-primary btn-lg"><i class="fa fa-hand-o-right fa-lg"></i> Apply for this position</button></a-->
+    </div>
+</div>
+ </body>
+</html>
+

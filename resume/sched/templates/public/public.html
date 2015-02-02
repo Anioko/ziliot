@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="{% block description_b %}{% endblock description_b %} Find and search for job opportunities and many jobs near you by filling out resume online and apply for current openings and upcoming openings. Our online system enables companies to post trainee vacancies track the applicants also.">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
+
+    <title>About Ziliot Job search and recruitment website|Ziliot</title>
+    <!-- Bootstrap core CSS -->
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/bootswatch.css') }}" rel="stylesheet" type="text/css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+
+
+    <!-- Font Awesome CSS -->
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <link href="{{ url_for('static', filename='css/amatic.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/jquery.pagedown-bootstrap.css') }}" rel="stylesheet">
+    <script type="text/javascript" src="{{ url_for('static', filename='js/jquery.pagedown-bootstrap.combined.min.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/script_publick.js') }}"></script>
+    
+    <script type="text/javascript">
+      var FHChat = {product_id: "9e238e5e5331"};
+      FHChat.properties={};FHChat.set=function(key,data){this.properties[key]=data};!function(){var a,b;return b=document.createElement("script"),a=document.getElementsByTagName("script")[0],b.src="https://chat-client-js.firehoseapp.com/chat-min.js",b.async=!0,a.parentNode.insertBefore(b,a)}();
+    </script>
+
+    {% block head %}{% endblock head %}
+
+
+</head>
+
+<body role="document">
+
+<!-- Fixed navbar -->
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>          </button>
+
+            <!----<a href="{{url_for('landing_page', lang_code= g.current_lang)}}"><img src="../../../../../static/img/jobisoft.1.png" height="42" width="156"></a>---->
+        </div>
+
+        <div class="navbar-collapse collapse">
+            {% if current_user.is_authenticated() %}
+                {% if(current_user.company == True and 
+                (current_user.has_role('ROLE_COMPANY_FREE') == False) and
+                (current_user.has_role('ROLE_COMPANY_BASIC') == False) and
+                (current_user.has_role('ROLE_COMPANY_SILVER') == False) and
+                (current_user.has_role('ROLE_COMPANY_GOLD') == False) and
+                (current_user.has_role('ROLE_COMPANY_PLATINUM') == False))
+                %}
+                <ul class="nav navbar-nav">
+                    <li><a href="{{ url_for('company_register', lang_code= g.current_lang) }}">{{_('Activate company membership')}}</a></li>
+                    <li><a href="/blog" target="_blank">Blog</a></li>
+                    <li><a href="{{ url_for('contact_form', lang_code=g.current_lang) }}">{{_('Contact')}}</a></li>
+                </ul>
+                
+                {% elif ((current_user.company == False or current_user.company == None)and current_user.has_role('ROLE_CANDIDATE') == True) %}
+                <ul class="nav navbar-nav">
+                    <li><a href="{{ url_for('resumes_list', lang_code= g.current_lang) }}"><i class="fa fa-check"></i> {{_('My Resume')}}</a></li>
+                    <li><a href="{{ url_for('resume_create', lang_code= g.current_lang) }}"><i class="fa fa-plus"></i> {{_('Create Resume')}}</a></li>
+                    <li><a href="{{ url_for('all_positions', lang_code= g.current_lang) }}"><i class="fa fa-briefcase"></i> {{_('All Vacancies')}} </a></li>
+                    <!---Public View-->
+                    <li><a href="/blog" target="_blank">Blog</a></li>
+                    <li><a href="{{ url_for('contact_form', lang_code= g.current_lang) }}"><i class="fa fa-envelope"></i> {{_('Contact')}}</a></li>
+                </ul>
+                {% else %}
+                <ul class="nav navbar-nav">
+                    <li><a href="{{ url_for('position_list', lang_code=g.current_lang) }}"><i class="fa fa-check"></i> {{_('Vacancies')}}</a></li>
+                    <li><a href="{{ url_for('position_create', lang_code=g.current_lang) }}"><i class="fa fa-plus"></i> {{_('Add vacancy')}}</a></li>
+                    {%if current_user.has_role('ROLE_COMPANY_PLATINUM')==True%} <!----Change to False to enable subscription---->
+                       
+                    <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> {{_('Subscription')}}</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="{{ url_for('company_subscription', lang_code=g.current_lang) }}"><i class="fa fa-refresh"></i> {{_('Upgrade')}} </a></li>
+                        <li><a href="{{ url_for('cancel_subscription_feedback', lang_code=g.current_lang) }}"><i class="fa fa-times"></i> {{_('Cancel ')}}</a></li>
+                    </ul>
+
+
+
+                    </li>
+                      
+                    {%endif%}
+                    <li><a href="/blog" target="_blank">Blog</a></li>
+                    <li><a href="{{ url_for('contact_form', lang_code= g.current_lang)}}"><i class="fa fa-envelope"></i> {{_('Contact')}}</a></li>
+
+                </ul>
+                {% endif %}
+            <ul class="nav navbar-nav navbar-right">
+                
+                  <li><a href="{{url_for('landing_page', lang_code='en')}}"><img src="../../../../static/img/gb.png" height="12"></a></li>
+                  <li><a href="{{url_for('landing_page', lang_code='fi')}}"><img src="../../../../static/img/fi.png" height="12"></a></li>
+                  <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-lock"></i> {{ current_user.name }} <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="{{ url_for_security('logout') }}"><i class="fa fa-sign-out"></i> {{_('Logout')}}</a></li>
+                    </ul>
+                </li>
+            </ul>
+            {% else %}
+            <ul class="nav navbar-nav navigation">
+                <li><a href="{{url_for('landing_page', lang_code= g.current_lang)}}">{{_('Ziliot')}}</a></li>
+                <li><a href="{{url_for('about_us', lang_code= g.current_lang)}}">{{_('About')}}</a></li>
+                <li><a href="/blog" target="_blank">Blog</a></li>
+                <li><a href="{{url_for('data_policy', lang_code= g.current_lang)}}">{{_('Policy')}}</a></li>
+                <!--<li><a href="#contact">Contact</a></li>-->
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+               <li><a href="{{url_for('landing_page', lang_code='en')}}"><img src="../static/img/gb.png" height="12"></a></li>
+            <li><a href="{{url_for('landing_page', lang_code='fi')}}"><img src="../static/img/fi.png" height="12"></a></li>
+                <li><a href="{{url_for_security('register',lang_code=g.current_lang)}}">{{_('Sign up')}}</a></li>
+                <li><a href="/login"><i class="fa fa-unlock"></i> {{_('Login')}}</a></li>
+            </ul>
+            {% endif %}
+        </div><!--/.nav-collapse -->
+    </div>
+</div>
+{% block main %}{% endblock main %}
+{% block content %}{% endblock %}
+
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="{{ url_for('static', filename='js/bootstrap.js') }}"></script>
+<script src="{{ url_for('static', filename='js/bootswatch.js') }}"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-18497297-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<style>
+    @font-face {
+    font-family: 'Amatic';
+    src: url('Amatic/amaticsc-regular-webfont.eot');
+    src: url('Amatic/amaticsc-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('Amatic/amaticsc-regular-webfont.woff') format('woff'),
+         url('Amatic/amaticsc-regular-webfont.ttf') format('truetype'),
+         url('Amatic/amaticsc-regular-webfont.svg#amatic_scregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+    .masthead {
+    padding: 6em 0;
+    position: relative;
+    text-align: center;
+    }
+    h1 {
+    font-size: 5em;
+    line-height: 1;
+    }
+    .intro-marketing {
+    background-color: #FFFFFF;
+    padding-bottom: 3em;
+    }
+    .bs-docs-featurette {
+    padding-bottom: 100px;
+    padding-top: 100px;
+    }
+    .bs-docs-featurette {
+    background-color: #FFFFFF;
+    border-bottom: 1px solid #E5E5E5;
+    color: #555555;
+    font-size: 16px;
+    line-height: 1.5;
+    padding-bottom: 40px;
+    padding-top: 40px;
+    text-align: center;
+    }
+
+    .navbar-inverse {
+        background-color: #5B6C7E;
+        border-color: #5B6C7E;
+        box-shadow: 0 2px 10px rgba(40,40,40,.2);
+    }
+</style>
+
+
+</body>
+</html>
